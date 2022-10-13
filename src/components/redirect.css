@@ -48,7 +48,9 @@ body{
      white-space:nowrap;
       
   }
-  
+  .tokenareadiv pre{
+    color:blue;
+  }
     #tokenResponse{
       font-family: Menlo, monospace;
       width: 100%;
