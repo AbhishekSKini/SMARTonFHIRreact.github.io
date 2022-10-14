@@ -4,6 +4,7 @@ import './redirect.css'
 import Patientdisplay from "./sub_components/patientdisplay";
 import Userdisplay from "./sub_components/userdisplay";
 import Tokendisplay from "./sub_components/tokendisplay";
+import LoadingSpinner from "./spinner.js"
 
 
 export default function Redirect() {
@@ -43,7 +44,7 @@ export default function Redirect() {
           <Userdisplay myAppSmart={myApp} />
           <Tokendisplay myAppSmart={myApp} />
         </div>
-        : <div>Loading......</div>
+        : <LoadingSpinner/>
       }
     </>
   );

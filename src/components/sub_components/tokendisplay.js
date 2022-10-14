@@ -1,4 +1,5 @@
 import { parseJwt } from "../helper.js";
+import LoadingSpinner from "../spinner.js"
 import { useEffect, useState } from "react";
 
 export default function Tokendisplay({ myAppSmart }) {
@@ -9,7 +10,7 @@ export default function Tokendisplay({ myAppSmart }) {
 
 
   const [refreshToken, setRefreshToken] = useState('');
-  const [formattedDecodedTok, setFormattedDecodedTok] = useState(<p>Loading</p>);
+  const [formattedDecodedTok, setFormattedDecodedTok] = useState('');
   const [tokenResponse, setTokenResponse] = useState('');
   const [loading, setLoading] = useState(true);
 
@@ -55,7 +56,7 @@ export default function Tokendisplay({ myAppSmart }) {
           </div>
         </div>
         :
-        <div>Loading</div>
+       <LoadingSpinner/>
       }
     </>
   )

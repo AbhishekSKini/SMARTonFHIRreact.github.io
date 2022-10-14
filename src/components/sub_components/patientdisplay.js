@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import LoadingSpinner from "../spinner.js";
 
 export default function Patientdisplay({ myAppSmart }) {
   console.log("Props" + myAppSmart);
@@ -80,9 +81,7 @@ export default function Patientdisplay({ myAppSmart }) {
         </div>
 
         :
-        <div>
-          Loading...
-        </div>
+          <LoadingSpinner/>
       }
     </>
 

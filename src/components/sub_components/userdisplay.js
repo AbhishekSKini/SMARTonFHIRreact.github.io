@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { parseJwt } from "../helper.js";
+import LoadingSpinner from "../spinner.js";
 
 export default function Userdisplay({ myAppSmart }) {
   console.log("Props" + myAppSmart);
@@ -54,8 +55,7 @@ export default function Userdisplay({ myAppSmart }) {
           </div>
         </div>
         :
-        <div>
-          Loading...</div>
+         <LoadingSpinner/>
       }
     </>
   )
